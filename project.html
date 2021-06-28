@@ -39,6 +39,7 @@
             margin-top: -75px;
         }
 
+
         .links {
             margin-right: 50px;
         }
@@ -51,9 +52,19 @@
 
         /* jumbotron */
         .jumbotron {
-            background: url(./imgs/cover.jpg);
+            background: url(./imgs/cover.jpg) no-repeat;
             background-size: cover;
             height: 700px;
+        }
+
+        @media screen and (max-width:1080px) {
+            .jumbotron {
+                background-size: contain;
+            }
+
+            .jumbotron-fluid {
+                height: auto
+            }
         }
 
         .jumbotron h1 {
@@ -338,13 +349,14 @@
         </div>
         <div class="links">
             <div>
-                <a href="">ABOUT</a>
-                <a href="">STYLE</a>
-                <a href="">NEW</a>
-                <a href="">BEST</a>
-                <a href="">CONTACT</a>
-                <a href=""><i class="fas fa-user"></i></a>
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href="" class="d-none d-md-inline">ABOUT</a>
+                <a href="" class="d-none d-md-inline">STYLE</a>
+                <a href="" class="d-none d-md-inline">NEW</a>
+                <a href="" class="d-none d-md-inline">BEST</a>
+                <a href="" class="d-none d-md-inline">CONTACT</a>
+                <a href="" class="d-none d-lg-inline"><i class="fas fa-user"></i></a>
+                <a href="" class="d-none d-lg-inline"><i class="fas fa-shopping-cart"></i></a>
+                <a href="" class="d-sm-inline d-md-none"><i class="fas fa-bars"></i></a>
             </div>
         </div>
     </nav>
@@ -475,12 +487,12 @@
             <div class="ins w-100">
                 <div class="w-100 d-flex"
                     style="justify-content: space-between; padding-left: 40px; padding-right: 40px; padding-top: 20px;">
-                    <div class="inspic"><a href=""><img src="./imgs/sec4_1.jpg" alt=""></a></div>
-                    <div class="inspic"><a href=""><img src="./imgs/sec4_2.jpg" alt=""></a></div>
-                    <div class="inspic"><a href=""><img src="./imgs/sec4_3.jpg" alt=""></a></div>
-                    <div class="inspic"><a href=""><img src="./imgs/sec4_4.jpg" alt=""></a></div>
-                    <div class="inspic"><a href=""><img src="./imgs/sec4_5.jpg" alt=""></a></div>
-                    <div class="inspic"><a href=""><img src="./imgs/sec4_6.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_1.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_2.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_3.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_4.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_5.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_6.jpg" alt=""></a></div>
                 </div>
             </div>
         </div>
