@@ -113,8 +113,6 @@
         }
 
         .sec1 .card1-text {
-            width: 360px;
-            height: 80px;
             padding-top: 40px;
             order: 1;
         }
@@ -127,12 +125,28 @@
         @media screen and (max-width:768px) {
             .sec1 {
                 height: 1400px;
+                margin-top: -100px;
             }
 
-            /* .sec1 .card2-text {
-                margin-top: 0px;
-                order: 1;
+            .sec1 .carousel1 {
+                margin-top: -150px;
             }
+
+            .sec1 .card2-text {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+
+            .sec1 .card1-text {
+                padding-top: 10px;
+            }
+
+            /* 
+            .card2-text {
+                display: none;
+            } */
+
+            /* 
 
             .sec1 .card1-text {
                 padding-top: 100px;
@@ -227,6 +241,12 @@
             height: 700px;
         }
 
+        @media screen and (max-width:768px) {
+            .sec3 {
+                height: 500px;
+            }
+        }
+
         .sec3 h2 {
             color: #865439;
             font-family: operetta-12, serif;
@@ -239,6 +259,20 @@
 
         #carouselExampleIndicators {
             margin: auto;
+        }
+
+        .smallcarousel {
+            display: none;
+        }
+
+        @media screen and (max-width:768px) {
+            .bigcarousel {
+                display: none;
+            }
+
+            .smallcarousel {
+                display: block;
+            }
         }
 
         .sec3 img {
@@ -271,6 +305,12 @@
             width: 220px;
             margin-top: 5%;
 
+        }
+
+        @media screen and (max-width:768px) {
+            .sec4 .inspic a img {
+                height: 200px;
+            }
         }
 
         /* sec5 */
@@ -347,7 +387,16 @@
 
         .nameimg img {
             width: 300px;
+        }
 
+        @media screen and (max-width:768px) {
+            .nameimg img {
+                margin-left: -40px;
+            }
+
+            .sec5 .nametext {
+                padding-left: 100px;
+            }
         }
 
         .sec5 .name h3 {
@@ -417,7 +466,7 @@
     <section>
         <div class="jumbotron jumbotron-fluid w-100">
             <div class="container">
-                <h1 class="display-4">Nahuhs_Jewelry</h1>
+                <h1>Nahuhs_Jewelry</h1>
                 <p class="lead">"I have enough jewelry." Said no one ever.
                 </p>
             </div>
@@ -429,37 +478,33 @@
         <div class="jq1">
             <div class="container">
                 <div class="row d-flex flex-wrap justify-content-between">
-                    <div class="col-xs-6 col-lg-6">
-                        <div>
-                            <div class="card" style="width: 350px; height: 467px;">
-                                <img src="./imgs/sec1_card1.jpg" class="card-img-top" alt="...">
-                            </div>
-                            <div class="card1-text">
-                                <h2>STYLE <br>
-                                    YOURSELF</h2>
-                                <p>We would recommend that you start by creating a vision board to find out what
-                                    direction
-                                    you want to
-                                    head
-                                    in.
-                                </p>
-                                <button class="btn">Learn more</button>
-                            </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="card" style="width: 350px; height: 467px;">
+                            <img src="./imgs/sec1_card1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card1-text">
+                            <h2>STYLE <br>
+                                YOURSELF</h2>
+                            <p>We would recommend that you start by creating a vision board to find out what
+                                direction
+                                you want to
+                                head
+                                in.
+                            </p>
+                            <button class="btn">Learn more</button>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-lg-6">
-                        <div>
-                            <div class="card2-text">
-                                <h2>ABOUT</h2>
-                                <div style="width: 400px;height: 100px;">
-                                    <p>The Jewelry Store is your new online retailer in the United States with some of
-                                        the Finest Jewelry from around the world! Merchandise is guaranteed as
-                                        described,
-                                        genuine,
-                                        authentic,
-                                        and
-                                        beautifully crafted.</p>
-                                </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="card2-text">
+                            <h2>ABOUT</h2>
+                            <div style="width: 400px;height: 100px;">
+                                <p>The Jewelry Store is your new online retailer in the United States with some of
+                                    the Finest Jewelry from around the world! Merchandise is guaranteed as
+                                    described,
+                                    genuine,
+                                    authentic,
+                                    and
+                                    beautifully crafted.</p>
                             </div>
                         </div>
                         <div class="carousel1" style="width: 425px; height: 566px; padding-top: 100px;">
@@ -507,7 +552,7 @@
                         <div class="sec2card1-text">
                             <h2>NEW ARRIVALS</h2>
                             <p>All new jewelry arrivals updated every Saturday.</p>
-                            <button class="btn">Learn more</button>
+                            <a href="./newArrivals.html"><button class="btn">Learn more</button></a>
                         </div>
                     </div>
                     <div class="col-xs-6 col-lg-6">
@@ -523,54 +568,96 @@
     <section class="sec3">
         <div class="jq3">
             <div class="container">
-                <div class="col-lg-12">
-                    <h2>BESTSELLERS</h2>
-                    <div class="bigcarousel">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
-                            style="width: 1080px; height: 350px;">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" style="width: 1080px; height: 350px;">
-                                <div class="carousel-item active">
-                                    <div class="d-flex">
-                                        <img src="./imgs/sec3_1_1.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_1_2.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_1_3.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_1_4.jpg" class="d-block w-25" alt="...">
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="d-flex">
-                                        <img src="./imgs/sec3_2_1.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_2_2.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_2_3.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_2_4.jpg" class="d-block w-25" alt="...">
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="d-flex">
-                                        <img src="./imgs/sec3_3_1.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_3_2.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_3_3.jpg" class="d-block w-25" alt="...">
-                                        <img src="./imgs/sec3_3_4.jpg" class="d-block w-25" alt="...">
-                                    </div>
+                <h2>BESTSELLERS</h2>
+                <div class="bigcarousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                        style="width: 1080px; height: 350px;">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" style="width: 1080px; height: 350px;">
+                            <div class="carousel-item active">
+                                <div class="d-flex">
+                                    <img src="./imgs/sec3_1_1.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_1_2.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_1_3.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_1_4.jpg" class="d-block w-25" alt="...">
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <img src="./imgs/sec3_2_1.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_2_2.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_2_3.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_2_4.jpg" class="d-block w-25" alt="...">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <img src="./imgs/sec3_3_1.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_3_2.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_3_3.jpg" class="d-block w-25" alt="...">
+                                    <img src="./imgs/sec3_3_4.jpg" class="d-block w-25" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="smallcarousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 600px;">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" style="width: 600px;">
+                        <div class="carousel-item active">
+                            <div class="d-flex">
+                                <img src="./imgs/sec3_1_1.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_1_2.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_1_3.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_1_4.jpg" class="d-block w-25" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex">
+                                <img src="./imgs/sec3_2_1.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_2_2.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_2_3.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_2_4.jpg" class="d-block w-25" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex">
+                                <img src="./imgs/sec3_3_1.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_3_2.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_3_3.jpg" class="d-block w-25" alt="...">
+                                <img src="./imgs/sec3_3_4.jpg" class="d-block w-25" alt="...">
+                            </div>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -582,7 +669,9 @@
             <div class="ins w-100">
                 <div class="w-100 d-flex"
                     style="justify-content: space-between; padding-left: 40px; padding-right: 40px; padding-top: 20px;">
-                    <div class="inspic col-2"><a href=""><img src="./imgs/sec4_1.jpg" alt=""></a></div>
+                    <div class="inspic col-2"><a
+                            href="https://www.instagram.com/nahuhs_jewelry/?utm_medium=copy_link"><img
+                                src="./imgs/sec4_1.jpg" alt=""></a></div>
                     <div class="inspic col-2"><a href=""><img src="./imgs/sec4_2.jpg" alt=""></a></div>
                     <div class="inspic col-2"><a href=""><img src="./imgs/sec4_3.jpg" alt=""></a></div>
                     <div class="inspic col-2"><a href=""><img src="./imgs/sec4_4.jpg" alt=""></a></div>
@@ -630,13 +719,14 @@
                 </div>
                 <div class="name col-4 d-flex-align">
                     <div class="nameimg"><img src="./imgs/Logo.png" alt=""></div>
-                    <a href="">
+                    <div class="nametext">
                         <h3>Nahuhs_Jewelry</h3>
-                    </a>
-                    <div class="icons2 d-flex ">
-                        <a href=""><i class="fab fa-instagram-square"></i></a>
-                        <a href=""><i class="fab fa-facebook-square"></i></a>
-                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <div class="icons2 d-flex ">
+                            <a href="https://www.instagram.com/nahuhs_jewelry/?utm_medium=copy_link"><i
+                                    class="fab fa-instagram-square"></i></a>
+                            <a href=""><i class="fab fa-facebook-square"></i></a>
+                            <a href=""><i class="fab fa-twitter-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
